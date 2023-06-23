@@ -1,3 +1,3 @@
 export const Example = () => (
-  <div data-testid={"Example"}>サンプルコンポーネント</div>
-);
+  <div data-testid={'Example'}>サンプルコンポーネント</div>
+)
