@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 要件
 
-## Getting Started
+## 表示
 
-First, run the development server:
+- ToDo リストが表示される
+- ToDo を追加する input が表示される
+- ToDo ごとに CheckBox が表示される
+- ToDo リストごとに削除ボタンが表示される
+- 完了した ToDo を表示させるボタンが表示される
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 挙動
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ToDo を input に入力し確定すると、ToDo リストに追加される
+  - Enter キーで追加される
+  - 追加ボタンで追加される
+- input タグが空白の場合、ToDo リストに追加されない
+  - Enter キーを押下しても追加されない
+  - 追加ボタンは非活性になっている
+- チェックボックスに Check を入れると非表示になる
+  - キーボードでも操作可能にする
+- 削除ボタンを押下すると Alert が表示される
+  - キーボードでも操作可能にする
+  - 削除するの場合、ToDo が削除される
+  - キャンセルの場合、Alert が閉じる
+- 完了した ToDo を表示させるボタンを押下すると完了済みの ToDo が表示される
+  - 弱いカラーで表示される
+  - チェックボックスのチェックを外すことで、未完了の状態に戻せる
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 仕様
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ToDo リストは localStorage に保存される
