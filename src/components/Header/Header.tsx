@@ -1,5 +1,5 @@
 export const Header = () => (
   <header>
-    <h1>hogehoge</h1>
+    <h1>TDD ToDo App</h1>
   </header>
 )

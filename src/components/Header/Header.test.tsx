@@ -13,7 +13,7 @@ describe('Header components Test', () => {
   it('h1タグの内容がTDD ToDo Appである', () => {
     render(<Header />)
     expect(
-      screen.getAllByRole('heading', { level: 1, name: 'TDD ToDo App' })
+      screen.getByRole('heading', { level: 1, name: 'TDD ToDo App' })
     ).toBeInTheDocument()
   })
 })
