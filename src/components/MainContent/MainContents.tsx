@@ -1,4 +1,4 @@
-export const MainContent = () => {
+export const MainContents = () => {
   const todos = [
     {
       id: 1,

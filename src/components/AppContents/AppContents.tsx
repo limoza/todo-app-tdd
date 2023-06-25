@@ -1,9 +1,9 @@
 import { Header } from '@/components/Header'
-import { MainContent } from '@/components/MainContent'
+import { MainContents } from '@/components/MainContent'
 
 export const AppContents = () => (
   <>
     <Header />
-    <MainContent />
+    <MainContents />
   </>
 )
