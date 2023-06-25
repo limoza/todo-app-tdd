@@ -6,9 +6,9 @@ describe('Button components Test', () => {
     render(<Button />)
     expect(screen.getByRole('button')).toBeInTheDocument()
   })
-  it('button要素のテキストはxxxである', () => {
+  it('button要素のテキストはBUTTONである', () => {
     render(<Button />)
-    expect(screen.getByRole('button')).toHaveTextContent('xxx')
+    expect(screen.getByRole('button')).toHaveTextContent('BUTTON')
   })
   it.todo('button要素をクリックすれば関数が動く')
 })
