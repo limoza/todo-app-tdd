@@ -2,7 +2,13 @@ import { render, screen } from '@testing-library/react'
 import { Button } from './Button'
 
 describe('Button components Test', () => {
-  it.todo('button要素が表示されている')
-  it.todo('button要素のテキストはxxxである')
+  it('button要素が表示されている', () => {
+    render(<Button />)
+    expect(screen.getByRole('button')).toBeInTheDocument()
+  })
+  it('button要素のテキストはxxxである', () => {
+    render(<Button />)
+    expect(screen.getByRole('button')).toHaveTextContent('xxx')
+  })
   it.todo('button要素をクリックすれば関数が動く')
 })
