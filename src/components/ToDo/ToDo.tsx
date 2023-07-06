@@ -1,10 +1,4 @@
-import { Todo, Todos } from '@/types/types'
-
-type Props = {
-  todos: Todos
-}
-
-export const ToDo = ({ todos }: Props) => {
+export const ToDo = () => {
   return (
     <li>
       <label htmlFor="ToDoTextInput">
