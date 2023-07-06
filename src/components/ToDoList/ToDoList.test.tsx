@@ -4,7 +4,20 @@ import { useState } from 'react'
 
 describe('ToDoList components Test', () => {
   it('ToDoList要素が1つだけ表示されている', () => {
-    render(<ToDoList />)
+    const { result } = renderHook(() =>
+      useState([
+        {
+          id: 1,
+          text: 'ToDoText',
+          status: 'undone',
+        },
+      ])
+    )
+    const [todos, setTodos] = result.current
+
+    console.log(todos)
+
+    render(<ToDoList todos={todos} />)
     expect(screen.getAllByRole('list')).toHaveLength(1)
   })
   it('listの個数がtodos + 入力欄と同じ数である', () => {
